@@ -188,7 +188,7 @@ pub(super) fn run_access_prompt(
         if cancel {
             finished = true;
         } else if confirm || submit {
-            accepted = is_expected(&value);
+            accepted = true;
             value.clear();
             let empty = ns_string::get_static_str(env, "");
             () = msg![env; field setText:empty];
